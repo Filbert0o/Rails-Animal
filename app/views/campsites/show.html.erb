@@ -1,0 +1,16 @@
+<h1>Name: <%= @campsite.name %></h1>
+<h2>Onwer: <%= @campsite.owner %></h2>
+<h3>Decription: <%= @campsite.description %></h3>
+
+<ul>
+  <% @villagers.each do |villager| %>
+    <li>
+      <%= villager.name %>
+      <%= villager.animal %>
+      <%= villager.happiness %>
+      <%= villager.created_at.strftime("%B %d %Y") %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Villager", new_campsite_villager_path(@campsite) %>

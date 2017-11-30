@@ -1,0 +1,17 @@
+<h1>Villagers form for <%=@campsite.name%></h1>
+
+<%= form_for [@campsite, @villager] do |f| %>
+
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :animal %>
+  <%= f.text_field :animal %>
+
+  <%= f.label :happiness %>
+  <%= f.number_field :happiness %>
+</fieldset>
+
+<%= f.submit "Add Villager" %>
+<% end %>
